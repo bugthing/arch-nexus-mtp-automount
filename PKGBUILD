@@ -8,7 +8,7 @@ url="https://github.com/fxthomas/android-automount"
 license=('unknown')
 depends=(go-mtpfs-git daemonize)
 source=('99-android-mtp.rules' 'android-mtp@.service' 'mtp')
-md5sums=('f1976d53148cdf6a914544a9848d5d56'
+md5sums=('ff01a763e8542be576f9c1f31e5b4bc6'
          '98ad3d341ad4425abfee7fd949e4da63'
          '225253503daca8c75ef2dbc3bd25db69')
 install='android-automount.install'
