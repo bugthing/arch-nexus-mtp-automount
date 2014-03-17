@@ -9,7 +9,7 @@ license=('unknown')
 depends=(mtpfs)
 source=('99-android-mtp.rules' 'android-mtp@.service')
 md5sums=('ff01a763e8542be576f9c1f31e5b4bc6'
-         '6845d40b3e3eae964b8fd063874c28c5')
+'96856182a70eb3026e5b9314dcf26a62')
 install='android-mtp.install'
 
 package() {
