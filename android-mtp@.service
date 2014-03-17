@@ -2,7 +2,7 @@
 
 [Service]
 Type=forking
-ExecStartPre=mkdir /media/%I
+ExecStartPre=/usr/bin/mkdir /media/%I
 ExecStart=/usr/bin/mtpfs -o allow_other /media/%I
 ExecStop=/usr/bin/fusermount -u /media/%I
-ExecStopPost=rmdir /media/%I
+ExecStopPost=/usr/bin/rmdir /media/%I
