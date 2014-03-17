@@ -1,0 +1,8 @@
+# Android MTP - automount service
+
+[Service]
+Type=forking
+ExecStartPre=mkdir /media/%I
+ExecStart=/usr/bin/mtpfs -o allow_other /media/%I
+ExecStop=/usr/bin/fusermount -u /media/%I
+ExecStopPost=rmdir /media/%I

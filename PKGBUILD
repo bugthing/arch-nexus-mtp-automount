@@ -1,28 +1,24 @@
-# Maintainer: François-Xavier Thomas <fx.thomas+arch@gmail.com>
-pkgname=android-automount
-pkgver=0.1
+# Maintainer: Benjamin Martin <benjamin247365@hotmail.com>
+pkgname=android-mtp
+pkgver=0.2
 pkgrel=1
 pkgdesc="Adds udev rules to automount Android devices"
 arch=('any')
-url="https://github.com/fxthomas/android-automount"
+url="https://github.com/bugthing/arch-nexus-mtp-automount"
 license=('unknown')
-depends=(go-mtpfs-git daemonize)
-source=('99-android-mtp.rules' 'android-mtp@.service' 'mtp')
+depends=(mtpfs)
+source=('99-android-mtp.rules' 'android-mtp@.service')
 md5sums=('ff01a763e8542be576f9c1f31e5b4bc6'
-         '98ad3d341ad4425abfee7fd949e4da63'
-         '225253503daca8c75ef2dbc3bd25db69')
-install='android-automount.install'
+         '6845d40b3e3eae964b8fd063874c28c5')
+install='android-mtp.install'
 
 package() {
   mkdir -p $pkgdir/usr/lib/udev/rules.d/
   mkdir -p $pkgdir/usr/lib/systemd/system/
-  mkdir -p $pkgdir/usr/bin/
   cp $srcdir/99-android-mtp.rules $pkgdir/usr/lib/udev/rules.d/99-android-mtp.rules
   cp $srcdir/android-mtp@.service $pkgdir/usr/lib/systemd/system/android-mtp@.service
-  cp mtp $pkgdir/usr/bin/mtp
   chmod a+r $pkgdir/usr/lib/udev/rules.d/99-android-mtp.rules
   chmod a+r $pkgdir/usr/lib/systemd/system/android-mtp@.service
-  chmod a+rx $pkgdir/usr/bin/mtp
 }
 
 # vim:set ts=2 sw=2 et:
