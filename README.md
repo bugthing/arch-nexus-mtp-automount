@@ -8,7 +8,7 @@ devices in Arch Linux.
 
     makepkg -s
 
-    sudo pacman -U android-automount-0.1-1-any.pkg.tar.xz
+    sudo pacman -U android-automount-0.<TAB>
 
     cp 99-android-mtp.rules /etc/udev/rules.d/
 
