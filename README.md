@@ -12,7 +12,7 @@ devices in Arch Linux.
 
     cp 99-android-mtp.rules /etc/udev/rules.d/
 
-    cp android-mtp.service 
+    cp android-mtp.service
 
     sudo systemctl start android-mtp
 
