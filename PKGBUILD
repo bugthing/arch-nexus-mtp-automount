@@ -1,15 +1,15 @@
 # Maintainer: Benjamin Martin <benjamin247365@hotmail.com>
 pkgname=android-mtp
-pkgver=0.2
+pkgver=0.5
 pkgrel=1
-pkgdesc="Adds udev rules to automount Android devices"
+pkgdesc="Adds udev rules to automount Android devices (using go-mtpfs-git)"
 arch=('any')
 url="https://github.com/bugthing/arch-nexus-mtp-automount"
 license=('unknown')
-depends=(mtpfs)
+depends=(go-mtpfs-git)
 source=('99-android-mtp.rules' 'android-mtp@.service')
 md5sums=('ff01a763e8542be576f9c1f31e5b4bc6'
-'4b2a63952453d480f2edef72876d1dd8')
+'6a371ca3357f4a1c2887f1a639180813')
 install='android-mtp.install'
 
 package() {
